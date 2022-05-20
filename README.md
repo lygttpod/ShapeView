@@ -13,7 +13,7 @@
 ## 二、如何使用
 ### 1、Android Studio导入方法，添加Gradle依赖
 
-   先在项目根目录的 build.gradle 的 repositories 添加:
+先在项目根目录的 build.gradle 的 repositories 添加:
 ```
      allprojects {
          repositories {
@@ -22,11 +22,10 @@
         }
     }
 ```
- 然后在dependencies添加:
+然后在dependencies添加:
 ```
         dependencies {
-        ...
-        implementation 'com.github.lygttpod:ShapeView:VERSION_CODE'
+            implementation 'com.github.lygttpod:ShapeView:VERSION_CODE'
         }
 ```
 > ## 温馨提示：你的项目需要支持kotlin
@@ -67,7 +66,7 @@
 
 属性名 | 字段 | 描述 | 默认值
 ----|------|----| ----
-shapeType | enum  | 类型(0,1,2,3,4) | 0
+shapeType | enum  | rectangle、oval、line、ring | rectangle
 shapeSolidColor | color  | 填充色 | 无
 shapeSelectorPressedColor | color  | 按下时候的颜色 | 无
 shapeSelectorDisableColor | color  | 不可用显示的颜色 | 无
@@ -81,7 +80,12 @@ shapeStrokeWidth | dimension  | 边框宽度 | 0dp
 shapeStrokeDashWidth | dimension  | 虚线宽度 | 0dp
 shapeStrokeDashGap | dimension  | 虚线间隙宽度 | 0dp
 shapeStrokeColor | color  | 边框颜色 | 无
-
+shapeGradientAngle | enum  | left_right、bl_tr、bottom_top、br_tl、right_left、tr_bl、top_bottom、tl_br | left_right
+shapeGradientStartColor | color  | 渐变开始颜色 | 无
+shapeGradientCenterColor | color  | 渐变中间颜色 | 无
+shapeGradientEndColor | color  | 渐变结束颜色 | 无
+shapeUseSelector | bool  | 是否使用selector | false
+shapeGradientType | enum  | linear | false
 
 # 三、[更新日志](https://github.com/lygttpod/ShapeView/releases)
 
